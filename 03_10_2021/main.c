@@ -21,7 +21,7 @@ int main(void) {
     // WHAT WE HAVE
     size_t total_sold = 0;
     for (int i = 0; i < num_movies; i++) {
-        size_t tickets_sold = list_of_movies[i].tickets_sold;
+        size_t tickets_sold = get_sold(list_of_movies[i]);
         total_sold += tickets_sold;
     }
     printf("Total tickets sold: %li\n", total_sold);
