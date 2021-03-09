@@ -27,7 +27,8 @@ int max_consecutive_ones(int *arr, int size) {
     
 }
 
-int main(void) {
+int main(int argc, char **argv) {
+    fprintf(stdout, "%s\n", argv[1]);
     int arr[] = {1, 1, 0, 1, 1, 1};
     int size = 6;
     int max_ones = max_consecutive_ones(arr, size);
