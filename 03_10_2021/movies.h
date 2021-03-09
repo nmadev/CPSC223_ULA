@@ -13,7 +13,7 @@ typedef struct movie movie;
  * @param t a character array holding the name of the movie, non-NULL
  * @return a pointer to a movie struct
  */
-double movie_create(char* t);
+movie *movie_create(char* t);
 
 /**
  * Prints movie name, number of tickets sold, and number of tickets 

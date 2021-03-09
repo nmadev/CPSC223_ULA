@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #include "movies.h"
 
-struct _movie
+struct movie
 {
     char *name;
     size_t tickets_sold;
     size_t tickets_left;
-}
+};
 
 movie *movie_create(char *t)
 {
@@ -39,8 +40,8 @@ void movie_print(movie *m)
         fprintf(stderr, "INVALID MOVIE TO PRINT\n");
     }
     fprintf(stdout, "TITLE: %50s\t\t", m->name);
-    fprintf(stdout, "TICKETS SOLD: %lu\t\t", m->name);
-    fprintf(stdout, "TICKETS LEFT: %lu\n", m->name);
+    fprintf(stdout, "TICKETS SOLD: %lu\t\t", m->tickets_sold);
+    fprintf(stdout, "TICKETS LEFT: %lu\n", m->tickets_left);
 }
 
 size_t get_sold(movie *m)
