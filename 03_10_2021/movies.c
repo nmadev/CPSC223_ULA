@@ -34,23 +34,39 @@ movie *movie_create(char *t)
 
 void movie_print(movie *m)
 {
-    fprintf("TITLE: %50s", m->name);
-    fprintf("TICKETS SOLD: %lu", m->name);
-    fprintf("TICKETS LEFT: %lu\n", m->name);
+    if (m == NULL)
+    {
+        fprintf(stderr, "INVALID MOVIE TO PRINT\n");
+    }
+    fprintf(stdout, "TITLE: %50s\t\t", m->name);
+    fprintf(stdout, "TICKETS SOLD: %lu\t\t", m->name);
+    fprintf(stdout, "TICKETS LEFT: %lu\n", m->name);
 }
 
 size_t get_sold(movie *m)
 {
+    if (m == NULL)
+    {
+        return 0;
+    }
     return m->tickets_sold;
 }
 
 size_t get_left(movie *m)
 {
+    if (m == NULL)
+    {
+        return 0;
+    }
     return m->tickets_left;
 }
 
 char *get_name(movie *m)
 {
+    if (m == NULL)
+    {
+        return NULL;
+    }
     return m->name;
 }
 
