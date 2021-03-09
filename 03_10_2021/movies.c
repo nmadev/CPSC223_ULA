@@ -1,5 +1,6 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 #include "movies.h"
 
@@ -10,9 +11,11 @@ struct _movie
     size_t tickets_left;
 }
 
-movie *movie_create(char *t, size_t sold)
+movie *movie_create(char *t)
 {
     movie *m = malloc(sizeof(movie));
+    srand(time(NULL));
+    size_t sold = (rand() % 100);
     if (m != NULL)
     {
         size_t t_len = strlen(t);
@@ -29,6 +32,13 @@ movie *movie_create(char *t, size_t sold)
     return m;
 }
 
+void movie_print(movie *m)
+{
+    fprintf("TITLE: %50s", m->name);
+    fprintf("TICKETS SOLD: %lu", m->name);
+    fprintf("TICKETS LEFT: %lu\n", m->name);
+}
+
 size_t get_sold(movie *m)
 {
     return m->tickets_sold;
@@ -39,11 +49,10 @@ size_t get_left(movie *m)
     return m->tickets_left;
 }
 
-size_t get_sold(movie *m)
+char *get_name(movie *m)
 {
-    return m->tickets_sold;
+    return m->name;
 }
-
 
 void movie_destroy(movie *m)
 {
