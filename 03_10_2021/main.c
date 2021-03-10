@@ -104,7 +104,7 @@ int main(void) {
     "Beauty and the Beast", "Born in China", "Guardians of the Galaxy, Vol. 2", "Pirates of the Caribbean: Dead Men Tell No Tales", "Cars 3", "Jagga Jasoos", "Thor: Ragnarok", "Coco", "Star Wars: The Last Jedi", "Black Panther", "A Wrinkle in Time", "Avengers: Infinity War", "Solo: A Star Wars Story", "Incredibles 2", "Ant-Man and The Wasp", "Christopher Robin", "The Nutcracker and the Four Realms", "Ralph Breaks the Internet", "Mary Poppins Returns", "Captain Marvel", "Dumbo", "Penguins", "Avengers: Endgame", "Aladdin", "Toy Story 4", "The Lion King", "Maleficent: Mistress of Evil", "Frozen 2", "Star Wars: The Rise of Skywalker"};
 
     theater *t = theater_create();
-
+    
     for (size_t i = 0; i < num_movies; i++) {
         movie *m = movie_create(movie_names[i]);
         movie_print(m);
@@ -112,4 +112,5 @@ int main(void) {
     }
     // TODO: This is currently O(n) and we want it to be O(1)
     printf("Total tickets sold: %li\n", theater_tickets_sold(t));
+
 }
