@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 #include "movies.h"
-#include "movie_theater.h"
 
 char *get_list_of_movies();
 
