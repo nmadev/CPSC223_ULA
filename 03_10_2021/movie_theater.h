@@ -7,7 +7,7 @@
 #include "movies.h"
 struct theater;
 typedef struct theater theater;
-
+//TODO: Add descriptions of functions (modeled in movies.h)
 
 theater *theater_create();
 
