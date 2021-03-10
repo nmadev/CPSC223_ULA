@@ -23,7 +23,7 @@ movie *movie_create(char *t)
         {
             m->name[i] = t[i];
         }
-        m->name[t_len + 1] = '\0';
+        m->name[t_len] = '\0';
         m->name = t;
         m->tickets_sold = sold;
         m->tickets_left = 100 - sold;
@@ -38,7 +38,7 @@ void movie_print(movie *m)
         fprintf(stderr, "INVALID MOVIE TO PRINT\n");
     }
     fprintf(stdout, "TITLE: %60s\t\t", m->name);
-    fprintf(stdout, "TICKETS SOLD: %lu\t\t", m->tickets_sold);
+    fprintf(stdout, "TICKETS SOLD: %lu \t\t", m->tickets_sold);
     fprintf(stdout, "TICKETS LEFT: %lu\n", m->tickets_left);
 }
 

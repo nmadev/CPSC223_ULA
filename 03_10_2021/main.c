@@ -106,7 +106,9 @@ int main(void) {
     theater *t = theater_create();
 
     for (size_t i = 0; i < num_movies; i++) {
-        add_movie(t, movie_names[i]);
+        movie *m = movie_create(movie_names[i]);
+        movie_print(m);
+        add_movie(t, m);
     }
     
     // get total tickets sold O(n)

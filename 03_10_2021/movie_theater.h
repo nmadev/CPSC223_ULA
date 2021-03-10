@@ -11,7 +11,7 @@ typedef struct theater theater;
 
 theater *theater_create();
 
-void add_movie(theater *t, char *name);
+void add_movie(theater *t, movie *m);
 
 void destroy_theater(theater *t);
 

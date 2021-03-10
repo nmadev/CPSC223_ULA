@@ -21,19 +21,17 @@ theater *theater_create()
         t->size = 0;
         t->capacity = 2;
         t->all_movies = malloc(sizeof(movie*) * t->capacity);
-    }
-    
+    }  
     return t;
 }
 
-void add_movie(theater *t, char *name) 
+void add_movie(theater *t, movie *m) 
 {
     if (t->size >= t->capacity - 1)
     {
         t->capacity++;
         t->all_movies = realloc(t->all_movies, sizeof(movie*) * t->capacity); 
     }
-    movie *m = movie_create(name);
     t->all_movies[t->size++] = m;
 }
 
