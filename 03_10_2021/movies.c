@@ -39,7 +39,7 @@ void movie_print(movie *m)
     {
         fprintf(stderr, "INVALID MOVIE TO PRINT\n");
     }
-    fprintf(stdout, "TITLE: %50s\t\t", m->name);
+    fprintf(stdout, "TITLE: %60s\t\t", m->name);
     fprintf(stdout, "TICKETS SOLD: %lu\t\t", m->tickets_sold);
     fprintf(stdout, "TICKETS LEFT: %lu\n", m->tickets_left);
 }

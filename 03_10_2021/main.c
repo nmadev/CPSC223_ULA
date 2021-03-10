@@ -108,6 +108,7 @@ int main(void) {
     for (size_t i = 0; i < num_movies; i++) {
         // create movie struct
         movie *m = movie_create(movie_names[i]);
+        // movie_print(m);
         // add movie struct to list of movies
         list_of_movies[i] = m;
     }
