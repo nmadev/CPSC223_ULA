@@ -5,8 +5,7 @@
 #include "movie_theater.h"
 #include "movies.h"
 
-struct theater
-{
+struct theater {
     movie **all_movies;
     size_t size;
     size_t capacity;
@@ -14,8 +13,7 @@ struct theater
 };
 
 // create a theater
-theater *theater_create() 
-{
+theater *theater_create() {
     theater *t = malloc(sizeof(theater));
     if (t != NULL) {
         t->size = 0;
@@ -25,8 +23,7 @@ theater *theater_create()
     return t;
 }
 
-void add_movie(theater *t, movie *m) 
-{
+void add_movie(theater *t, movie *m) {
     if (t->size >= t->capacity - 1)
     {
         t->capacity++;
@@ -35,8 +32,7 @@ void add_movie(theater *t, movie *m)
     t->all_movies[t->size++] = m;
 }
 
-void destroy_theater(theater *t)
-{
+void destroy_theater(theater *t) {
     for (size_t i = 0; i < t->size; t++)
     {
         movie_destroy(t->all_movies[i]);
@@ -45,8 +41,7 @@ void destroy_theater(theater *t)
     free(t);
 }
 
-movie *get_movie(theater *t, size_t i)
-{
+movie *get_movie(theater *t, size_t i) {
     if (i >= t->size)
     {
         return NULL;
@@ -54,8 +49,7 @@ movie *get_movie(theater *t, size_t i)
     return t->all_movies[i];
 }
 
-size_t tickets_sold(theater *t)
-{
+size_t tickets_sold(theater *t) {
     // ??????
     return 0;
 }
