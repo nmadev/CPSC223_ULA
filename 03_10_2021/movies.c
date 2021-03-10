@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
 
 #include "movies.h"
@@ -15,8 +14,7 @@ struct movie
 movie *movie_create(char *t)
 {
     movie *m = malloc(sizeof(movie));
-    srand(time(NULL));
-    size_t sold = (rand() % 100);
+    size_t sold = ((long)m % 100);
     if (m != NULL)
     {
         size_t t_len = strlen(t);
