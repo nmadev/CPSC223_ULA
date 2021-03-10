@@ -1,11 +1,12 @@
-#ifndef __MOVIES_H__
-#define __MOVIES_H__
+#ifndef __MOVIE_THEATER_H__
+#define __MOVIE_THEATER_H__
 
 #include <stdio.h>
 #include <stdlib.h>
 
-struct movie;
-typedef struct movie movie;
+#include "movies.h"
+struct theater;
+typedef struct theater theater;
 
 /**
  * Creates and returns a pointer to a movie struct, NULL if unable
