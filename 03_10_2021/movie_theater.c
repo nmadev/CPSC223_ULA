@@ -9,7 +9,6 @@ struct theater {
     movie **all_movies;
     size_t size;
     size_t capacity;
-    // TODO: something else should go here
 };
 
 // create a theater - TODO: Is there anything we can do here to make later operations more efficient?
@@ -51,6 +50,10 @@ movie *get_movie(theater *t, size_t i) {
 }
 
 size_t theater_tickets_sold(theater *t) {
-    //TODO
-    return 0; // you'll probably definitely have to replace this
+    size_t total_sold = 0;
+    for (int i = 0; i < t->size; i++) {
+        size_t tickets_sold = get_sold(get_movie(t, i));
+        total_sold += tickets_sold;
+    }
+    return total_sold;
 }
