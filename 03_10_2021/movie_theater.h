@@ -17,6 +17,6 @@ void destroy_theater(theater *t);
 
 movie *get_movie(theater *t, size_t i);
 
-size_t tickets_sold(theater *t);
+size_t theater_tickets_sold(theater *t);
 
 #endif

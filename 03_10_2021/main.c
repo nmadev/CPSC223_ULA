@@ -112,6 +112,7 @@ int main(void) {
     }
     
     // get total tickets sold O(n)
+    // TODO: Comment out lines 116-121
     size_t total_sold = 0;
     for (int i = 0; i < num_movies; i++) {
         size_t tickets_sold = get_sold(get_movie(t, i));
@@ -119,6 +120,7 @@ int main(void) {
     }
     printf("Total tickets sold: %li\n", total_sold);
 
-    // WHAT WE WANT
-    // printf("Total tickets sold: %li\n", get_total_tickets(mt));
+    // WHAT WE WANT O(1)
+    // TODO: uncomment line 125
+    // printf("Total tickets sold: %li\n", theater_tickets_sold(t));
 }

@@ -9,10 +9,10 @@ struct theater {
     movie **all_movies;
     size_t size;
     size_t capacity;
-    // something else should go here
+    // TODO: something else should go here
 };
 
-// create a theater
+// create a theater - TODO: Is there anything we can do here to make later operations more efficient?
 theater *theater_create() {
     theater *t = malloc(sizeof(theater));
     if (t != NULL) {
@@ -24,6 +24,7 @@ theater *theater_create() {
 }
 
 void add_movie(theater *t, movie *m) {
+    // TODO: Is there anything we can do here to make it more efficient?
     if (t->size >= t->capacity - 1)
     {
         t->capacity++;
@@ -49,7 +50,7 @@ movie *get_movie(theater *t, size_t i) {
     return t->all_movies[i];
 }
 
-size_t tickets_sold(theater *t) {
-    // ??????
-    return 0;
+size_t theater_tickets_sold(theater *t) {
+    //TODO
+    return 0; // you'll probably definitely have to replace this
 }
