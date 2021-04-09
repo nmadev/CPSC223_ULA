@@ -38,7 +38,7 @@ void uninitialised_3() {
 int main() {
     
     // TIP: uncomment each function one at a time to solve errors as they come
-    uninitialised_1();
+    // uninitialised_1();
     // uninitialised_2();
     // uninitialised_3();
 
